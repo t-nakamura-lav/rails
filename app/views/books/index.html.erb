@@ -26,26 +26,32 @@
     </tbody>
 </table>
 
+<h2>New book</h2>
+
 <% if @book.errors.any? %>
-<div class="alert alert-error">
-  <%= @book.errors.count %>errors prohibited this book from being saved:
-  <% @book.errors.full_messages.each do |message| %>
-    <%= message %>
-  <% end %>
+<div class= error>
+        <h5><%= @book.errors.count %>errors prohibited this book from being saved:
+        </h5>
+    <ul>
+            <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+            <% end %>
+    </ul>
 </div>
 <% end %>
 
 
-<h2>New book</h2>
 
-<%= form_with model: @book, url:'/books', local:true do |f| %>
-<h4>Title</h4>
-<%= f.text_field :title %>
+<div class= field>
+    <%= form_with model: @book, url:'/books', local:true do |f| %>
+    <h4>Title</h4>
+    <%= f.text_field :title %>
 
-<h4>Body</h4>
-<%= f.text_area :body %>
+    <h4>Body</h4>
+    <%= f.text_area :body %>
+</div>
 
-<%= f.submit 'Create Book' %>
+    <%= f.submit 'Create Book' %>
 
 <% end %>
 

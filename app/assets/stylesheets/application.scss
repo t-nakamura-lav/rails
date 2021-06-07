@@ -34,7 +34,7 @@ body{
   width: 60%
 }
 
-.alert{
+.error{
   width: 450px;
   border: 2px solid red;
   padding: 7px;
@@ -43,19 +43,33 @@ body{
   background-color: white;
 }
 
+h5{
+  padding: 5px 5px 5px 15px ;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: red;
+  color: white;
+}
+
+ul{
+  margin: 33px;
+}
+
+li{
+  font-size: 12px;
+  list-style: square;
+}
+
 .field_with_errors {
 input {
 @extend .is-invalid;
+border: 3px solid red;
 }
 }
-.form-group {
+
 .field_with_errors {
-label {
-font-size: 20px;
-font-weight: 500;
-}
-input {
-height: 50px;
-}
+textarea {
+@extend .is-invalid;
+border: 3px solid red;
 }
 }
