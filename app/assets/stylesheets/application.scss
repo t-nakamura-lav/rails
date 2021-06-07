@@ -13,3 +13,49 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
+/* ブラウザがそれぞれ持っているCSSをリセットするための記述 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  line-height: 30px;
+  margin: 33px;
+}
+
+.table{
+  width: 60%
+}
+
+.alert{
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.field_with_errors {
+input {
+@extend .is-invalid;
+}
+}
+.form-group {
+.field_with_errors {
+label {
+font-size: 20px;
+font-weight: 500;
+}
+input {
+height: 50px;
+}
+}
+}
